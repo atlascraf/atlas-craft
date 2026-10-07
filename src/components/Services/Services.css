@@ -1,0 +1,117 @@
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s5);
+}
+
+@media (min-width: 960px) {
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  position: relative;
+  background: var(--surface-200);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--s6);
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-color, var(--amber));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.service-card.accent-amber {
+  --accent-color: var(--amber);
+}
+
+.service-card.accent-cyan {
+  --accent-color: var(--cyan);
+}
+
+.service-card.accent-muted {
+  --accent-color: var(--ink-muted);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color, var(--amber));
+  background: color-mix(in srgb, var(--accent-color, var(--amber)) 14%, transparent);
+  margin-bottom: var(--s5);
+}
+
+.service-number {
+  display: block;
+  color: var(--ink-muted);
+  margin-bottom: var(--s2);
+}
+
+.service-card h3 {
+  margin-bottom: var(--s3);
+}
+
+.service-card p {
+  color: var(--ink-muted);
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.service-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--s5) 0;
+}
+
+.service-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.service-bullets li {
+  font-size: 14px;
+  color: var(--ink-muted);
+  padding-left: var(--s4);
+  position: relative;
+}
+
+.service-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-color, var(--amber));
+}

@@ -2,4 +2,7 @@ node_modules/
 .DS_Store
 .mcp.json
 .claude/
-static/models/
+static/
+dist/
+*.tsbuildinfo
+vite.config.d.ts

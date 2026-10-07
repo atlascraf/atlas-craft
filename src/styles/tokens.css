@@ -1,0 +1,55 @@
+:root {
+  --surface-100: #faf9f6;
+  --surface-200: #ffffff;
+  --surface-300: #f1efe9;
+  --border: #e4e1da;
+  --ink: #15181c;
+  --ink-muted: #5c6066;
+  --amber: #b96a12;
+  --amber-on: #ffffff;
+  --cyan: #0f7a7a;
+  --cyan-on: #ffffff;
+  --success: #15803d;
+  --warning: #92400e;
+  --danger: #b91c1c;
+  --shadow: 0 18px 44px rgba(21, 24, 28, 0.1);
+
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-full: 999px;
+
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Manrope', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Hero/header keep their original look in both themes */
+  --hero-bg: #09101c;
+  --hero-glass: rgba(255, 255, 255, 0.1);
+  --hero-glass-b: rgba(255, 255, 255, 0.28);
+}
+
+:root[data-theme='dark'] {
+  --surface-100: #0d0f12;
+  --surface-200: #15181c;
+  --surface-300: #1d2127;
+  --border: #262a2f;
+  --ink: #f5f3ef;
+  --ink-muted: #9aa0a6;
+  --amber: #f2a93b;
+  --amber-on: #15181c;
+  --cyan: #3ec6c6;
+  --cyan-on: #0d0f12;
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
